@@ -8,7 +8,7 @@ local servers = {
   "dockerls",
   "html",
   "lua_ls",
-  "ruff_lsp",
+  "ruff",
   "rust_analyzer",
   "svelte",
   "tailwindcss",
