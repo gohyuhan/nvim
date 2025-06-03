@@ -28,6 +28,10 @@ require("lazy").setup({
 }, lazy_config)
 
 require("nvim-tree").setup {
+  filters = {
+    git_ignored = false,  -- ← this disables .gitignore filtering
+    dotfiles = false,     -- optional: show dotfiles like .env, .gitignore
+  },
   actions = {
     open_file = {
       quit_on_open = false,
