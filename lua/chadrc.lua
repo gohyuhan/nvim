@@ -19,5 +19,35 @@ M.base46 = {
 --          lazyload = false
 --      }
 --}
+M.plugins = {
+  user = {
+    ["nvim-treesitter/nvim-treesitter"] = {
+      ensure_installed = {
+        -- Your Core Languages
+        "python",
+        "javascript",
+        "typescript",
+        "tsx",
+        "svelte",
+        "html",
+        "css",
+        "rust",
+
+        -- NEW: Added common data & config languages
+        "json",
+        "yaml",
+        "dockerfile",
+        "bash",
+
+        -- Always good to have
+        "lua",
+        "vim",
+        "markdown",
+        "markdown_inline",
+      },
+    },
+    -- ... other user plugins ...
+  },
+}
 
 return M
