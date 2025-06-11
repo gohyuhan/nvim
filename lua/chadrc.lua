@@ -32,6 +32,7 @@ M.plugins = {
         "html",
         "css",
         "rust",
+        "go",
 
         -- NEW: Added common data & config languages
         "json",
