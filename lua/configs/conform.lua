@@ -3,8 +3,8 @@ local options = {
     -- Lua
     lua = { "stylua" },
 
-    -- Python
-    python = { "black" },
+    -- Python: Runs 'ruff_fix' (linter fixes) first, then 'ruff_format'
+    python = { "ruff_fix", "ruff_format" },
 
     -- Go
     go = { "gofumpt" },
@@ -12,32 +12,76 @@ local options = {
     -- Rust
     rust = { "rustfmt" },
 
-    -- Web Stack (Prettier handles all of these)
+    -- Web Stack
+    -- Prettier is robust enough to handle most "syntax-like" style errors in JS/HTML
     javascript = { "prettier" },
     typescript = { "prettier" },
-    javascriptreact = { "prettier" }, -- This handles .jsx
-    typescriptreact = { "prettier" }, -- This handles .tsx
+    javascriptreact = { "prettier" },
+    typescriptreact = { "prettier" },
     svelte = { "prettier" },
     css = { "prettier" },
+    scss = { "prettier" },
+    less = { "prettier" },
     html = { "prettier" },
     json = { "prettier" },
+    jsonc = { "prettier" },
     yaml = { "prettier" },
     markdown = { "prettier" },
     ["markdown.inline"] = { "prettier" },
+    graphql = { "prettier" },
+    handlebars = { "prettier" },
 
-    -- Shell / Bash
+    -- Shell
     sh = { "shfmt" },
     bash = { "shfmt" },
 
-    -- Dockerfile & Vim
-    -- We do NOT list them here explicitly. 
-    -- Because we set `lsp_fallback = true` in your keymap, 
-    -- these will automatically use the Language Server (dockerls / vimls) 
-    -- to format without needing extra config.
+    -- C/C++
+    c = { "clang-format" },
+    cpp = { "clang-format" },
+    objc = { "clang-format" },
+    objcpp = { "clang-format" },
+    cs = { "csharpier" },
+
+    -- Java
+    java = { "google-java-format" },
+
+    -- PHP
+    php = { "php-cs-fixer" },
+
+    -- Ruby
+    ruby = { "rubocop" },
+
+    -- Kotlin
+    kotlin = { "ktlint" },
+
+    -- Swift
+    swift = { "swiftformat" },
+
+    -- Dart
+    dart = { "dart_format" },
+
+    -- SQL
+    sql = { "sqlfluff" },
+
+    -- XML
+    xml = { "xmlformat" },
+
+    -- Terraform
+    terraform = { "terraform_fmt" },
+    tf = { "terraform_fmt" },
+
+    -- TOML
+    toml = { "taplo" },
+
+    -- Protobuf
+    proto = { "buf" },
   },
 
   format_on_save = {
-    timeout_ms = 250,
+    -- Increased to 2000ms because "Fixing" takes longer than just formatting
+    timeout_ms = 2000,
     lsp_fallback = true,
   },
 }
+
+return options

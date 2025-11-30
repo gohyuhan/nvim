@@ -3,19 +3,28 @@ require("nvchad.configs.lspconfig").defaults()
 
 -- List all installed servers here
 local servers = {
-  "cssls",
-  "docker_compose_language_service",
-  "dockerls",
   "html",
-  "lua_ls",
-  "pyright",
-  "rust_analyzer",
-  "svelte",
-  "tailwindcss",
-  "tsserver",
-  "yamlls",
+  "cssls",
+  "ts_ls",
+  "clangd",
   "gopls",
+  "pyright",
+  "lua_ls",
+  "rust_analyzer",
+  "bashls",
+  "jsonls",
+  "yamlls",
+  "intelephense",
+  "terraformls",
+  "lemminx",
+  "taplo",
+  "dockerls",
+  "jdtls",
+  "kotlin_language_server",
+  "solargraph",
+  "omnisharp",
+  "sqlls",
 }
 
 vim.lsp.enable(servers)
--- read :h vim.lsp.config for changing options of lsp servers 
+-- read :h vim.lsp.config for changing options of lsp servers
