@@ -12,7 +12,8 @@ return {
 
   {
     "williamboman/mason.nvim",
-    cmd = { "Mason", "MasonInstall", "MasonUpdate" },
+    -- cmd = { "Mason", "MasonInstall", "MasonUpdate" },
+    lazy = false,
     opts = {
       ui = {
         icons = {
@@ -27,32 +28,34 @@ return {
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     dependencies = { "williamboman/mason.nvim" },
+    -- cmd = { "MasonToolsInstall" },
+    lazy = false,
     opts = {
       ensure_installed = {
         -- ========================
         -- LSPs (Language Servers)
         -- ========================
-        "lua_ls", -- Lua
+        "lua-language-server", -- Lua
         "pyright", -- Python
         "gopls", -- Go
-        "rust_analyzer", -- Rust
-        "ts_ls", -- JS/TS
-        "html", -- HTML
-        "cssls", -- CSS
-        "jsonls", -- JSON
-        "yamlls", -- YAML
-        "bashls", -- Bash
+        "rust-analyzer", -- Rust
+        "typescript-language-server", -- JS/TS
+        "html-lsp", -- HTML
+        "css-lsp", -- CSS
+        "json-lsp", -- JSON
+        "yaml-language-server", -- YAML
+        "bash-language-server", -- Bash
         "clangd", -- C/C++
         "jdtls", -- Java
         "intelephense", -- PHP
         "lemminx", -- XML
-        "terraformls", -- Terraform
+        "terraform-ls", -- Terraform
         "taplo", -- TOML
-        "dockerls", -- Docker
-        "kotlin_language_server", -- Kotlin (NEW)
-        "solargraph", -- Ruby (NEW)
-        "omnisharp", -- C# (NEW)
-        "sqlls", -- SQL (NEW)
+        "dockerfile-language-server", -- Docker
+        "kotlin-language-server", -- Kotlin
+        -- "solargraph", -- Ruby
+        "omnisharp", -- C#
+        "sqls", -- SQL
 
         -- ========================
         -- Formatters & Linters
@@ -64,17 +67,23 @@ return {
         "prettier", -- Web
         "shfmt", -- Shell
         "clang-format", -- C/C++
-        "csharpier", -- C#
+        -- "csharpier", -- C#
         "google-java-format", -- Java
         "php-cs-fixer", -- PHP
-        "rubocop", -- Ruby
+        -- "rubocop", -- Ruby
         "ktlint", -- Kotlin
-        "swiftformat", -- Swift
+        "swiftlint", -- Swift
         "sqlfluff", -- SQL
-        "xmlformat", -- XML
+        "xmlformatter", -- XML
+        "buf", -- Protobuf
       },
       auto_update = true,
       run_on_start = true,
+      integrations = {
+        ["mason-lspconfig"] = true,
+        ["mason-null-ls"] = true,
+        ["mason-nvim-dap"] = true,
+      },
     },
   },
 

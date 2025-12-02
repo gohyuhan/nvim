@@ -55,16 +55,13 @@ local options = {
     kotlin = { "ktlint" },
 
     -- Swift
-    swift = { "swiftformat" },
-
-    -- Dart
-    dart = { "dart_format" },
+    swift = { "swiftlint" },
 
     -- SQL
     sql = { "sqlfluff" },
 
     -- XML
-    xml = { "xmlformat" },
+    xml = { "xmlformatter" },
 
     -- Terraform
     terraform = { "terraform_fmt" },
