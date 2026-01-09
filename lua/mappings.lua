@@ -10,7 +10,6 @@ map("n", "<leader>E", function()
 end, { noremap = true, silent = true })
 
 -- Unmap NvChad's default buffer navigation, close buffer, and LSP mappings
-map("n", "<leader>h", "<Nop>", { noremap = true, silent = true })
 map("n", "<leader>l", "<Nop>", { noremap = true, silent = true })
 map("n", "<leader>x", "<Nop>", { noremap = true, silent = true })
 map("n", "<leader>d", "<Nop>", { noremap = true, silent = true })
