@@ -16,11 +16,19 @@ M.base46 = {
 }
 
 -- M.nvdash = { load_on_startup = true }
--- M.ui = {
---       tabufline = {
---          lazyload = false
---      }
---}
+M.term = {
+  sizes = {
+    sp = 0.45, -- horizontal split height (0.45 = 45%)
+    vsp = 0.45, -- vertical split width (0.45 = 45%)
+  },
+
+  -- winopts is for vim window settings, NOT sizing
+  winopts = {
+    number = false,
+    relativenumber = false,
+  },
+}
+
 M.plugins = {
   user = {
     ["nvim-treesitter/nvim-treesitter"] = {
