@@ -56,6 +56,22 @@ map("v", "<C-v>", '"+p', { noremap = true, silent = true, desc = "Paste from sys
 map("i", "<D-v>", "<C-r>+", { noremap = true, silent = true, desc = "Paste from system clipboard (insert mode)" })
 map("i", "<C-v>", "<C-r>+", { noremap = true, silent = true, desc = "Paste from system clipboard (insert mode)" })
 
+-- <leader>l to toggle chat (works in Normal + Insert mode)
+map(
+  { "n", "i" },
+  "<leader><C-l>",
+  "<cmd>CodeCompanionChat Toggle<cr>",
+  { noremap = true, desc = "Toggle AI Chat", silent = true }
+)
+
+-- <leader>l in Visual mode: add selected text to chat
+map(
+  "v",
+  "<leader><C-l>",
+  "<cmd>CodeCompanionChat Add<cr>",
+  { noremap = true, desc = "Add selection to AI Chat", silent = true }
+)
+
 -- This overrides the default NvChad <leader>fm
 map("n", "<leader>fm", function()
   require("conform").format {
