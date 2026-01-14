@@ -85,7 +85,7 @@ return {
         spinner = {},
       },
       opts = {
-        log_level = "ERROR",
+        log_level = "DEBUG",
         send_code = true,
         use_default_prompt_library = true,
       },
