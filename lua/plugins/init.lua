@@ -86,7 +86,35 @@ return {
       },
     },
   },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        -- Your Core Languages
+        "python",
+        "javascript",
+        "typescript",
+        "tsx",
+        "svelte",
+        "html",
+        "css",
+        "rust",
+        "go",
 
+        -- NEW: Added common data & config languages
+        "json",
+        "yaml",
+        "dockerfile",
+        "bash",
+
+        -- Always good to have
+        "lua",
+        "vim",
+        "markdown",
+        "markdown_inline",
+      },
+    },
+  },
   {
     "neovim/nvim-lspconfig",
     config = function()
