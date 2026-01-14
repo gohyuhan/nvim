@@ -47,7 +47,7 @@ return {
         "bash-language-server", -- Bash
         "clangd", -- C/C++
         "jdtls", -- Java
-        "intelephense", -- PHP
+        -- "intelephense", -- PHP
         "lemminx", -- XML
         "terraform-ls", -- Terraform
         "taplo", -- TOML
@@ -73,7 +73,7 @@ return {
         -- "rubocop", -- Ruby
         "ktlint", -- Kotlin
         "swiftlint", -- Swift
-        "sqlfluff", -- SQL
+        -- "sqlfluff", -- SQL
         "xmlformatter", -- XML
         "buf", -- Protobuf
       },
