@@ -13,7 +13,6 @@ return {
   {
     "williamboman/mason.nvim",
     -- cmd = { "Mason", "MasonInstall", "MasonUpdate" },
-    lazy = false,
     opts = {
       ui = {
         icons = {
@@ -29,7 +28,6 @@ return {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     dependencies = { "williamboman/mason.nvim" },
     -- cmd = { "MasonToolsInstall" },
-    lazy = false,
     opts = {
       ensure_installed = {
         -- ========================
