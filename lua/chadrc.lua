@@ -66,29 +66,6 @@ M.plugins = {
         "markdown",
         "markdown_inline",
       },
-
-      -- 1. Syntax Highlighting
-      highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false, -- Set to false for better performance
-      },
-
-      -- 2. Better Indentation (= command)
-      indent = {
-        enable = true,
-      },
-
-      -- -- 3. Incremental Selection
-      -- -- This allows you to select code blocks and expand/shrink them
-      -- incremental_selection = {
-      --   enable = true,
-      --   keymaps = {
-      --     init_selection = "<C-space>", -- Ctrl + Space to start selecting
-      --     node_incremental = "<C-space>", -- Ctrl + Space to expand selection
-      --     scope_incremental = "<M-space>", -- Alt + Space to expand scope
-      --     node_decremental = "<bs>", -- Backspace to shrink selection
-      --   },
-      -- },
     },
     -- ... other user plugins ...
   },
