@@ -136,7 +136,6 @@ return {
         enabled = true,
         sign = true,
         position = "overlay",
-        icons = { "󰭻 ", "", "󰧑 ", "", "", "" },
       },
     },
     config = function(_, opts)
