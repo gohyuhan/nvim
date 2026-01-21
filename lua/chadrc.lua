@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "catppuccin",
+  theme = "solarized_osaka",
   transparency = true,
   -- Add this block to fix comment visibility under transparency
   hl_override = {
