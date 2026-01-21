@@ -25,7 +25,7 @@ M.base_30 = {
   seablue = "#0abdc6",
   yellow = "#f57800", -- neon yellow/orange (from your Ghostty palette 3/11)
   sun = "#f57800",
-  purple = "#711c91", -- (from your Ghostty palette 5/13)
+  purple = "#9d4dfa", -- purple
   dark_purple = "#711c91", -- dark purple
   teal = "#0abdc6",
   orange = "#f57800",
@@ -53,7 +53,7 @@ M.base_16 = {
   base0C = "#0abdc6", -- regex/support (CYAN)
   base0D = "#0abdc6", -- functions (CYAN)
   base0E = "#d300c4", -- keywords/operators (MAGENTA)
-  base0F = "#711c91", -- punctuation/tags (PURPLE)
+  base0F = "#9d4dfa", -- punctuation/tags (PURPLE)
 }
 
 M.type = "dark"
