@@ -35,47 +35,47 @@ return {
         -- ========================
         -- LSPs (Language Servers)
         -- ========================
-        "lua-language-server",        -- Lua
-        "pyright",                    -- Python
-        "gopls",                      -- Go
-        "rust-analyzer",              -- Rust
+        "lua-language-server", -- Lua
+        "pyright", -- Python
+        "gopls", -- Go
+        "rust-analyzer", -- Rust
         "typescript-language-server", -- JS/TS
-        "html-lsp",                   -- HTML
-        "css-lsp",                    -- CSS
-        "json-lsp",                   -- JSON
-        "yaml-language-server",       -- YAML
-        "bash-language-server",       -- Bash
-        "clangd",                     -- C/C++
-        "jdtls",                      -- Java
+        "html-lsp", -- HTML
+        "css-lsp", -- CSS
+        "json-lsp", -- JSON
+        "yaml-language-server", -- YAML
+        "bash-language-server", -- Bash
+        "clangd", -- C/C++
+        "jdtls", -- Java
         -- "intelephense", -- PHP
-        "lemminx",                    -- XML
-        "terraform-ls",               -- Terraform
-        "taplo",                      -- TOML
+        "lemminx", -- XML
+        "terraform-ls", -- Terraform
+        "taplo", -- TOML
         "dockerfile-language-server", -- Docker
-        "kotlin-language-server",     -- Kotlin
+        "kotlin-language-server", -- Kotlin
         -- "solargraph", -- Ruby
-        "omnisharp",                  -- C#
-        "sqls",                       -- SQL
+        "omnisharp", -- C#
+        "sqls", -- SQL
 
         -- ========================
         -- Formatters & Linters
         -- ========================
-        "hadolint",           -- Docker Linter
-        "stylua",             -- Lua
-        "ruff",               -- Python
-        "gofumpt",            -- Go
-        "prettier",           -- Web
-        "shfmt",              -- Shell
-        "clang-format",       -- C/C++
+        "hadolint", -- Docker Linter
+        "stylua", -- Lua
+        "ruff", -- Python
+        "gofumpt", -- Go
+        "prettier", -- Web
+        "shfmt", -- Shell
+        "clang-format", -- C/C++
         -- "csharpier", -- C#
         "google-java-format", -- Java
-        "php-cs-fixer",       -- PHP
+        "php-cs-fixer", -- PHP
         -- "rubocop", -- Ruby
-        "ktlint",             -- Kotlin
-        "swiftlint",          -- Swift
+        "ktlint", -- Kotlin
+        "swiftlint", -- Swift
         -- "sqlfluff", -- SQL
-        "xmlformatter",       -- XML
-        "buf",                -- Protobuf
+        "xmlformatter", -- XML
+        "buf", -- Protobuf
       },
       auto_update = true,
       run_on_start = true,
@@ -109,10 +109,25 @@ return {
 
         -- Always good to have
         "lua",
+        "luadoc",
+        "printf",
         "vim",
+        "vimdoc",
         "markdown",
         "markdown_inline",
       },
+
+      highlight = {
+        enable = true,
+        use_languagetree = true,
+      },
+
+      indent = {
+        enable = true,
+      },
+      config = function(_, opts)
+        require("nvim-treesitter.configs").setup(opts)
+      end,
     },
   },
   {

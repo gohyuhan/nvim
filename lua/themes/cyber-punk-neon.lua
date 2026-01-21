@@ -62,18 +62,12 @@ M.type = "dark"
 M.polish_hl = {
   defaults = {
     Comment = { fg = M.base_30.grey_fg, italic = true },
-  },
-  treesitter = {
-    ["@variable"] = { fg = M.base_16.base05 },
-    ["@function"] = { fg = M.base_16.base0D },
-    ["@keyword"] = { fg = M.base_16.base0E },
-    ["@string"] = { fg = M.base_16.base0B },
-    ["@number"] = { fg = M.base_16.base09 },
-    ["@type"] = { fg = M.base_16.base0A },
+    Operator = { fg = M.base_16.base0E }, -- Magenta
+    Delimiter = { fg = M.base_16.base0F }, -- Purple
   },
 }
 
 -- Allow chadrc overrides (string MUST match filename without .lua)
-M = require("base46").override_theme(M, "cyberpunk-neon")
+M = require("base46").override_theme(M, "cyber-punk-neon")
 
 return M

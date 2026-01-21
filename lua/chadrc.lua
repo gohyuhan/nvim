@@ -39,36 +39,11 @@ M.term = {
   },
 }
 
-M.plugins = {
-  user = {
-    ["nvim-treesitter/nvim-treesitter"] = {
-      ensure_installed = {
-        -- Your Core Languages
-        "python",
-        "javascript",
-        "typescript",
-        "tsx",
-        "svelte",
-        "html",
-        "css",
-        "rust",
-        "go",
-
-        -- NEW: Added common data & config languages
-        "json",
-        "yaml",
-        "dockerfile",
-        "bash",
-
-        -- Always good to have
-        "lua",
-        "vim",
-        "markdown",
-        "markdown_inline",
-      },
-    },
-    -- ... other user plugins ...
-  },
-}
+-- Plugin configuration is now managed in lua/plugins/init.lua
+-- M.plugins = {
+--   user = {
+--     -- ... other user plugins ...
+--   },
+-- }
 
 return M
