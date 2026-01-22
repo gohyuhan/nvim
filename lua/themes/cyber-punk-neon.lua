@@ -63,6 +63,12 @@ M.polish_hl = {
   defaults = {
     Comment = { fg = "#5a6a7f", italic = true },
 
+    -- Telescope Overrides
+    TelescopeSelection = { bg = "#123e7c", fg = "#f57800", bold = true },
+    TelescopeSelectionCaret = { fg = "#ff0000", bg = "#123e7c" },
+    TelescopeMatching = { fg = "#00ff00", bold = true },
+    TelescopeNormal = { bg = "#00050e" },
+
     -- FORCE DISTINCTNESS:
     -- Even if things default to Cyan, we force the Ghostty palette here.
     ["@variable"] = { fg = "#ff0000" }, -- Variables MUST be RED to stand out from Cyan text
