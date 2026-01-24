@@ -157,16 +157,16 @@ return {
 
       vim.opt.conceallevel = 2
       vim.opt.concealcursor = "nvic" -- Hide markup in Normal, Visual, Insert, and Command modes
-
-      -- FOR NVCHAD: Force it again whenever you enter a CodeCompanion buffer
-      -- because NvChad/CodeCompanion might reset buffer-local options
-      vim.api.nvim_create_autocmd("FileType", {
-        pattern = "codecompanion",
-        callback = function()
-          vim.opt_local.conceallevel = 2
-          vim.opt_local.concealcursor = "nvic"
-        end,
-      })
+      --
+      -- -- FOR NVCHAD: Force it again whenever you enter a CodeCompanion buffer
+      -- -- because NvChad/CodeCompanion might reset buffer-local options
+      -- vim.api.nvim_create_autocmd("FileType", {
+      --   pattern = "codecompanion",
+      --   callback = function()
+      --     vim.opt_local.conceallevel = 2
+      --     vim.opt_local.concealcursor = "nvic"
+      --   end,
+      -- })
     end,
   },
 }
