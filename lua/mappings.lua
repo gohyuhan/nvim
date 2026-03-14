@@ -80,3 +80,12 @@ map("n", "<leader>fm", function()
     timeout_ms = 1000,
   }
 end, { desc = "Format file" })
+
+-- Replace 'gd' with Telescope definition
+map("n", "gd", "<cmd>Telescope lsp_definitions<CR>", { desc = "LSP Definition (Telescope)" })
+
+-- Replace 'gD' with Telescope references/declarations
+map("n", "gD", "<cmd>Telescope lsp_references<CR>", { desc = "LSP References (Telescope)" })
+
+-- Optional: Replace 'gi' for implementations
+map("n", "gi", "<cmd>Telescope lsp_implementations<CR>", { desc = "LSP Implementations (Telescope)" })
