@@ -28,3 +28,19 @@ local servers = {
 
 vim.lsp.enable(servers)
 -- read :h vim.lsp.config for changing options of lsp servers
+
+-- Override mappings after LSP attaches to a buffer
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    local map = vim.keymap.set
+    local opts = { buffer = args.buf }
+
+    -- Force Telescope for definitions
+    opts.desc = "LSP Definition (Telescope)"
+    map("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
+
+    -- Force Telescope for references (usually mapped to gD or gr)
+    opts.desc = "LSP References (Telescope)"
+    map("n", "gD", "<cmd>Telescope lsp_references<CR>", opts)
+  end,
+})
