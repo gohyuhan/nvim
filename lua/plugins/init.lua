@@ -9,7 +9,6 @@ return {
       require("conform").setup(require "configs.conform")
     end,
   },
-
   {
     "williamboman/mason.nvim",
     -- cmd = { "Mason", "MasonInstall", "MasonUpdate" },
@@ -24,7 +23,6 @@ return {
       },
     },
   },
-
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     dependencies = { "williamboman/mason.nvim" },
@@ -133,7 +131,6 @@ return {
       require "configs.lspconfig"
     end,
   },
-
   {
     "MeanderingProgrammer/render-markdown.nvim",
     ft = { "markdown", "codecompanion" },
