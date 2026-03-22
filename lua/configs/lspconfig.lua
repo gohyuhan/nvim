@@ -44,3 +44,33 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("n", "gD", "<cmd>Telescope lsp_references<CR>", opts)
   end,
 })
+
+-- Diagnostic float config
+vim.diagnostic.config {
+  virtual_text = false,
+  float = { border = "rounded", source = true },
+}
+
+vim.o.updatetime = 250
+
+-- Auto float: diagnostic if error present, else hover
+vim.api.nvim_create_autocmd("CursorHold", {
+  callback = function()
+    local diagnostics = vim.diagnostic.get(0, {
+      lnum = vim.api.nvim_win_get_cursor(0)[1] - 1,
+    })
+
+    if #diagnostics > 0 then
+      vim.diagnostic.open_float(nil, { focusable = false })
+    else
+      local clients = vim.lsp.get_clients { bufnr = 0 }
+      if #clients > 0 then
+        vim.lsp.buf.hover {
+          border = "rounded",
+          focusable = false,
+          silent = true,
+        }
+      end
+    end
+  end,
+})
