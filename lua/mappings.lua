@@ -4,6 +4,7 @@ local map = vim.keymap.set
 -- General mappings
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>", { desc = "Exit insert mode" })
+map("i", "<C-e>", "<C-o>dw", { noremap = true, silent = true, desc = "Delete next word" })
 
 map("n", "<leader>E", function()
   require("nvim-tree.api").tree.focus()
@@ -18,9 +19,17 @@ map("n", "<leader>z", "<Nop>", { noremap = true, silent = true })
 map("n", "<leader>Z", "<Nop>", { noremap = true, silent = true })
 map("n", "<leader>p", "<Nop>", { noremap = true, silent = true })
 
--- Map <leader><Left> and <leader><Right> to navigate between buffers
-map("n", "<leader><Left>", ":bprevious<CR>", { noremap = true, silent = true })
-map("n", "<leader><Right>", ":bnext<CR>", { noremap = true, silent = true })
+-- Buffer navigation
+map("n", "<leader>,", ":bprevious<CR>", { noremap = true, silent = true, desc = "Previous buffer" })
+map("n", "<leader>.", ":bnext<CR>", { noremap = true, silent = true, desc = "Next buffer" })
+
+-- Mac-style line/file navigation
+map({ "n", "v" }, "<leader><Left>", "^", { noremap = true, silent = true, desc = "Start of line" })
+map({ "n", "v" }, "<leader><Right>", "$", { noremap = true, silent = true, desc = "End of line" })
+
+-- Mac-style line/file navigation (leader+arrow)
+map({ "n", "v" }, "<leader><Up>", "gg", { noremap = true, silent = true, desc = "Top of file" })
+map({ "n", "v" }, "<leader><Down>", "G", { noremap = true, silent = true, desc = "Bottom of file" })
 
 -- Map <leader>x to close the current buffer ( a hack to call the command twice so that i can still remain on the workspace )
 map("n", "<leader>x", ":bd<CR>|:bd<CR>", { noremap = true, silent = true })
