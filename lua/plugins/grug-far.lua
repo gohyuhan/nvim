@@ -36,7 +36,7 @@ return {
         desc = "Search & Replace word under cursor",
       },
       {
-        "<leader>sr",
+        "<leader>sR",
         function()
           require("grug-far").with_visual_selection { windowCreationCommand = "GrugFarOpenFloat" }
         end,
