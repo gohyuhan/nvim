@@ -75,22 +75,6 @@ vim.api.nvim_create_autocmd("CursorHold", {
   end,
 })
 
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "NvimTree",
-  once = true,
-  callback = function()
-    vim.defer_fn(function()
-      require("nvim-tree").setup {
-        diagnostics = {
-          enable = true,
-          show_on_dirs = true,
-          show_on_open_dirs = true,
-        },
-      }
-    end, 100)
-  end,
-})
-
 vim.api.nvim_create_autocmd("LspAttach", {
   once = true,
   callback = function()
