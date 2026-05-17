@@ -6,5 +6,4 @@ return {
   { import = "plugins.nvim-tree" },
   { import = "plugins.grug-far" },
   { import = "plugins.markdown" },
-  { import = "plugins.codecompanion" },
 }
