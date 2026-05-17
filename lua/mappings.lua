@@ -10,6 +10,9 @@ map("n", "<leader>E", function()
   require("nvim-tree.api").tree.focus()
 end, { noremap = true, silent = true })
 
+-- Unmap NvChad defaults
+map("n", "<leader>b", "<Nop>", { noremap = true, silent = true }) -- gitsigns takes this for blame_line (buffer-local)
+
 -- Unmap NvChad's default buffer navigation, close buffer, and LSP mappings
 map("n", "<leader>l", "<Nop>", { noremap = true, silent = true })
 map("n", "<leader>x", "<Nop>", { noremap = true, silent = true })
