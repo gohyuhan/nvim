@@ -37,21 +37,25 @@ return {
       {
         "<leader>sr",
         function()
-          require("grug-far").open { windowCreationCommand = "GrugFarOpenFloat" }
+          require("grug-far").open { windowCreationCommand = "GrugFarOpenFloat", transient = true }
         end,
         desc = "Search & Replace (grug-far)",
       },
       {
         "<leader>sw",
         function()
-          require("grug-far").open { windowCreationCommand = "GrugFarOpenFloat", prefills = { search = vim.fn.expand "<cword>" } }
+          require("grug-far").open {
+            windowCreationCommand = "GrugFarOpenFloat",
+            prefills = { search = vim.fn.expand "<cword>" },
+            transient = true,
+          }
         end,
         desc = "Search & Replace word under cursor",
       },
       {
         "<leader>sr",
         function()
-          require("grug-far").with_visual_selection { windowCreationCommand = "GrugFarOpenFloat" }
+          require("grug-far").with_visual_selection { windowCreationCommand = "GrugFarOpenFloat", transient = true }
         end,
         mode = "v",
         desc = "Search & Replace selection",
