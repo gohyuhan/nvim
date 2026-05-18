@@ -12,6 +12,12 @@ end, { noremap = true, silent = true })
 
 -- Unmap NvChad defaults
 map("n", "<leader>b", "<Nop>", { noremap = true, silent = true }) -- gitsigns takes this for blame_line (buffer-local)
+map("n", "<leader>n", "<Nop>", { noremap = true, silent = true }) -- moved to <leader>nn
+map("n", "<leader>rn", "<Nop>", { noremap = true, silent = true }) -- moved to <leader>nr
+
+-- Line number toggles (nn/nr frees rn for grug-far buffer keymaps)
+map("n", "<leader>nn", "<cmd>set nu!<CR>", { noremap = true, silent = true, desc = "Toggle line number" })
+map("n", "<leader>nr", "<cmd>set rnu!<CR>", { noremap = true, silent = true, desc = "Toggle relative number" })
 
 -- Unmap NvChad's default buffer navigation, close buffer, and LSP mappings
 map("n", "<leader>l", "<Nop>", { noremap = true, silent = true })

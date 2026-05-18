@@ -19,39 +19,30 @@ return {
         })
       end, {})
       require("grug-far").setup(opts)
-
-      vim.api.nvim_create_autocmd("FileType", {
-        pattern = "grug-far",
-        callback = function(ev)
-          vim.bo[ev.buf].buflisted = false
-          vim.keymap.set("n", "<leader>x", function()
-            vim.api.nvim_buf_delete(ev.buf, { force = true })
-          end, { buffer = ev.buf })
-          vim.keymap.set("n", "q", function()
-            vim.api.nvim_buf_delete(ev.buf, { force = true })
-          end, { buffer = ev.buf })
-        end,
-      })
     end,
     keys = {
       {
         "<leader>sr",
         function()
-          require("grug-far").open { windowCreationCommand = "GrugFarOpenFloat" }
+          require("grug-far").open { windowCreationCommand = "GrugFarOpenFloat", transient = true }
         end,
         desc = "Search & Replace (grug-far)",
       },
       {
         "<leader>sw",
         function()
-          require("grug-far").open { windowCreationCommand = "GrugFarOpenFloat", prefills = { search = vim.fn.expand "<cword>" } }
+          require("grug-far").open {
+            windowCreationCommand = "GrugFarOpenFloat",
+            transient = true,
+            prefills = { search = vim.fn.expand "<cword>" },
+          }
         end,
         desc = "Search & Replace word under cursor",
       },
       {
         "<leader>sr",
         function()
-          require("grug-far").with_visual_selection { windowCreationCommand = "GrugFarOpenFloat" }
+          require("grug-far").with_visual_selection { windowCreationCommand = "GrugFarOpenFloat", transient = true }
         end,
         mode = "v",
         desc = "Search & Replace selection",
@@ -59,6 +50,34 @@ return {
     },
     opts = {
       headerMaxWidth = 80,
+      keymaps = {
+        replace = { n = "rr" },
+        qflist = { n = "rq" },
+        syncLocations = { n = "rs" },
+        syncLine = { n = "rl" },
+        close = { n = "rc" },
+        historyOpen = { n = "rt" },
+        historyAdd = { n = "ra" },
+        refresh = { n = "rf" },
+        openLocation = { n = "ro" },
+        openNextLocation = { n = "<down>" },
+        openPrevLocation = { n = "<up>" },
+        gotoLocation = { n = "<enter>" },
+        pickHistoryEntry = { n = "<enter>" },
+        abort = { n = "rb" },
+        help = { n = "g?" },
+        toggleShowCommand = { n = "rw" },
+        swapEngine = { n = "re" },
+        previewLocation = { n = "ri" },
+        swapReplacementInterpreter = { n = "rx" },
+        applyNext = { n = "rj" },
+        applyPrev = { n = "rk" },
+        syncNext = { n = "rn" },
+        syncPrev = { n = "rp" },
+        syncFile = { n = "rv" },
+        nextInput = { n = "<tab>" },
+        prevInput = { n = "<s-tab>" },
+      },
     },
   },
 }
