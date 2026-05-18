@@ -85,3 +85,7 @@ map("n", "gD", "<cmd>Telescope lsp_references<CR>", { desc = "LSP References (Te
 
 -- Optional: Replace 'gi' for implementations
 map("n", "gi", "<cmd>Telescope lsp_implementations<CR>", { desc = "LSP Implementations (Telescope)" })
+
+-- Trouble: workspace diagnostics
+map("n", "<leader>tt", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Workspace diagnostics (Trouble)" })
+map("n", "<leader>tb", "<cmd>Trouble diagnostics toggle filter.buf=0<CR>", { desc = "Buffer diagnostics (Trouble)" })
