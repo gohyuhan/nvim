@@ -4,7 +4,7 @@
 -- List all installed servers here
 local servers = {
   "lua_ls", -- Mason: lua-language-server
-  "pyright", -- Mason: pyright
+  "basedpyright", -- Mason: basedpyright
   "gopls", -- Mason: gopls
   "rust_analyzer", -- Mason: rust-analyzer (Must use underscore!)
   "ts_ls", -- Mason: typescript-language-server
@@ -74,4 +74,3 @@ vim.api.nvim_create_autocmd("CursorHold", {
     end
   end,
 })
-

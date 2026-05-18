@@ -1,7 +1,7 @@
 return {
   {
     "nvim-tree/nvim-tree.lua",
-    lazy = false,
+    event = "VimEnter",
     opts = {
       filters = {
         git_ignored = false, -- ← this disables .gitignore filtering

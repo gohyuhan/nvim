@@ -1,8 +1,7 @@
 return {
   {
     "williamboman/mason.nvim",
-    -- cmd = { "Mason", "MasonInstall", "MasonUpdate" },
-    lazy = false,
+    cmd = { "Mason", "MasonInstall", "MasonUninstall", "MasonUpdate" },
     opts = {
       ui = {
         icons = {
@@ -16,15 +15,14 @@ return {
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     dependencies = { "williamboman/mason.nvim" },
-    -- cmd = { "MasonToolsInstall" },
-    lazy = false,
+    cmd = { "MasonToolsInstall", "MasonToolsUpdate", "MasonToolsClean" },
     opts = {
       ensure_installed = {
         -- ========================
         -- LSPs (Language Servers)
         -- ========================
         "lua-language-server", -- Lua
-        "pyright", -- Python
+        "basedpyright", -- Python
         "gopls", -- Go
         "rust-analyzer", -- Rust
         "typescript-language-server", -- JS/TS
@@ -65,8 +63,8 @@ return {
         "xmlformatter", -- XML
         "buf", -- Protobuf
       },
-      auto_update = true,
-      run_on_start = true,
+      auto_update = false,
+      run_on_start = false,
       integrations = {
         ["mason-lspconfig"] = true,
         ["mason-null-ls"] = true,
