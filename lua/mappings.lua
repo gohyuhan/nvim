@@ -93,9 +93,37 @@ map("n", "gD", "<cmd>Telescope lsp_references<CR>", { desc = "LSP References (Te
 map("n", "gi", "<cmd>Telescope lsp_implementations<CR>", { desc = "LSP Implementations (Telescope)" })
 
 -- Floating terminal
-map("n", "<leader>i", function()
-  require("nvchad.term").toggle { pos = "float", id = "floatTerm" }
-end, { desc = "Toggle floating terminal" })
+map("n", "<leader>ii", function()
+  require("nvchad.term").toggle { pos = "float", id = "floatTerm0" }
+end, { desc = "Toggle floating terminal - 0" })
+map("n", "<leader>i1", function()
+  require("nvchad.term").toggle { pos = "float", id = "floatTerm1" }
+end, { desc = "Toggle floating terminal - 1" })
+map("n", "<leader>i2", function()
+  require("nvchad.term").toggle { pos = "float", id = "floatTerm2" }
+end, { desc = "Toggle floating terminal - 2" })
+map("n", "<leader>i3", function()
+  require("nvchad.term").toggle { pos = "float", id = "floatTerm3" }
+end, { desc = "Toggle floating terminal - 3" })
+map("n", "<leader>i4", function()
+  require("nvchad.term").toggle { pos = "float", id = "floatTerm4" }
+end, { desc = "Toggle floating terminal - 4" })
+map("n", "<leader>i5", function()
+  require("nvchad.term").toggle { pos = "float", id = "floatTerm5" }
+end, { desc = "Toggle floating terminal - 5" })
+map("n", "<leader>i6", function()
+  require("nvchad.term").toggle { pos = "float", id = "floatTerm6" }
+end, { desc = "Toggle floating terminal - 6" })
+map("n", "<leader>i7", function()
+  require("nvchad.term").toggle { pos = "float", id = "floatTerm7" }
+end, { desc = "Toggle floating terminal - 7" })
+map("n", "<leader>i8", function()
+  require("nvchad.term").toggle { pos = "float", id = "floatTerm8" }
+end, { desc = "Toggle floating terminal - 8" })
+map("n", "<leader>i9", function()
+  require("nvchad.term").toggle { pos = "float", id = "floatTerm9" }
+end, { desc = "Toggle floating terminal - 9" })
+map("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true, desc = "Terminal: back to Normal mode" })
 
 -- Trouble: workspace diagnostics
 map("n", "<leader>tt", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Workspace diagnostics (Trouble)" })

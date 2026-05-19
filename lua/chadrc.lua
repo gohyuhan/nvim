@@ -31,6 +31,14 @@ M.term = {
     sp = 0.45, -- horizontal split height (0.45 = 45%)
     vsp = 0.45, -- vertical split width (0.45 = 45%)
   },
+  float = {
+    relative = "editor",
+    row = 0.125,
+    col = 0.125,
+    width = 0.75,
+    height = 0.75,
+    border = "single",
+  },
 
   -- winopts is for vim window settings, NOT sizing
   winopts = {
