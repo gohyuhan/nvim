@@ -123,7 +123,7 @@ end, { desc = "Toggle floating terminal - 8" })
 map("n", "<leader>i9", function()
   require("nvchad.term").toggle { pos = "float", id = "floatTerm9" }
 end, { desc = "Toggle floating terminal - 9" })
-map("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true, desc = "Terminal: back to Normal mode" })
+map("t", "<C-Esc>", "<C-\\><C-n>", { noremap = true, silent = true, desc = "Terminal: back to Normal mode" })
 
 -- Trouble: workspace diagnostics
 map("n", "<leader>tt", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Workspace diagnostics (Trouble)" })
